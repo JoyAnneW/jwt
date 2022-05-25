@@ -1,0 +1,20 @@
+npm init -y
+  - initializes project with all defaults in package.json
+
+npm i express jsonwebtoken dotenv
+  - install necessary dependencies
+
+npm i -- save-dev nodemon
+  - instal nodemon
+
+create server file
+
+add script in package.json to run nodemon in server file
+  - "start": "nodemon server.js"
+
+import express
+
+get the app variable from the express fn and use the .listen property to set up the server to listen to port 3000
+  - app.listen(3000)
+
+.rest file allows us to make requests to an api. Can also use postman. but with the REST Client ext of vscode, this can be done here
