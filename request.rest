@@ -1,4 +1,15 @@
-GET http://localhost:3000/posts
+GET http://localhost:3000/posts 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpveUEiLCJwYXNzd29yZCI6IiQyYiQxMCRzV3kxZ25XQ0o4Q2E1OVJuV1Yza0MudDdoSlBoTlNFWHVRME1aNVFyZXdVbENNdW5OR2tINiIsInRpdGxlIjoiUG9zdCA0IiwiaWF0IjoxNjUzNTEyOTM3fQ.dWmhYf8HU9yAmEaxfLTlZT6fdfi8iYGiRImthca8Kj4
+
+
+#  https://jwt.io/ - token consists of 3 sections
+#  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. - this line is common in all tokens. it's the header with encoding algo and token type.
+
+# this chunk is the endcoded payload data sent
+#eyJ1c2VybmFtZSI6IkphY2siLCJwYXNzd29yZCI6IiQyYiQxMCRBY1RDUDhPelJ1VmZ1aG9JSDYxR04uZHlla3oubVM5Q2E0aXdjaEouQWlJek96RWZYaHpUZSIsInRpdGxlIjoiUG9zdCA0IiwiaWF0IjoxNjUzNTEyMDQ3fQ.
+
+# this bit is the secret key created from the crypt library in node
+# 3DRI31lft1H6kv5xghRH69-LndSW8JmQX-TPzNqF7OA
 
 ###
 
@@ -6,7 +17,7 @@ POST http://localhost:3000/posts
 Content-Type: application/json
 
 {
-  "username":"Dacia",
+  "username":"JoyA",
   "password": "password",
   "title" : "Post 4"
 }
@@ -17,6 +28,6 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "username":"Dacia",
+  "username":"JoyA",
   "password": "password"
 }

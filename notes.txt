@@ -27,7 +27,7 @@ To hash a password there are 2 steps
   2 use that salt to hash a password
   Salt must be saved along with the password
   - if we simply passed a password string through a basic fn that transforms the password in some way, the problem is that it would produce the same 'hash' everytime. so if several users had the same password, this would be a huge security issue.
-    - the salt adds a different series of characters before each password so that the hash created is always unique
+    - the salt adds a different series of characters before each password to always generate a unique hash even if the plain text passwords are the same
 
   bcrypt(async) takes care of all this for us!
 
@@ -37,3 +37,12 @@ To hash a password there are 2 steps
       > node
       > require("crypto").randomBytes(64).toString("hex")
     - this will give a random set of characters everytime it's called
+
+    Authenticate the token:
+
+    req.headers.authorization
+    - e.g. Authorization: Bearer kgjklJ8Hf9GFG782jhA0khJKJlhK9K....
+
+    Authorization is a request header, commonly used for HTTP Basic Auth. It is set if the server requested authorization, and the browser then prompted the user for a username/password and sent it (base64-encoded) to the server with a subsequent request.
+
+    https://stackoverflow.com/questions/24000580/how-does-req-headers-authorization-get-set 
