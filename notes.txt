@@ -17,7 +17,16 @@ add script in package.json to run nodemon in server file
 
 import express
 
-get the app variable from the express fn and use the .listen property to set up the server to listen to port 3000
+get the app variable from the express fn and use the .listen property to set up the server on port 3000
   - app.listen(3000)
 
 .rest file allows us to make requests to an api. Can also use postman. but with the REST Client ext of vscode, this can be done here
+
+To hash a password there are 2 steps
+  1 create a salt 
+  2 use that salt to hash a password
+  Salt must be saved along with the password
+  - if we simply passed a password string through a basic fn that transforms the password in some way, the problem is that it would produce the same 'hash' everytime. so if several users had the same password, this would be a huge security issue.
+    - the salt adds a different series of characters before each password so that the hash created is always unique
+
+  bcrypt(async) takes care of all this for us!
