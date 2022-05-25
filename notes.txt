@@ -2,7 +2,10 @@ npm init -y
   - initializes project with all defaults in package.json
 
 npm i express jsonwebtoken dotenv
-  - install necessary dependencies
+  - install necessary dependencies to create express server
+
+npm i bcrypt
+  - allows for cryptography and hash creation
 
 npm i -- save-dev nodemon
   - instal nodemon
